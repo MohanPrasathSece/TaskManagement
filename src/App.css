@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9fafb;
+  background-color: #f7faff; /* Light blue background */
 }
 
 .container {
@@ -16,9 +16,9 @@ body {
 
 .column {
   background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -27,86 +27,102 @@ body {
 .column h3 {
   text-align: center;
   margin: 0;
-  font-size: 1.5em;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: 1.6em;
+  color: #34495e;
+  margin-bottom: 15px;
 }
 
 .task-count {
   text-align: center;
-  color: #666;
-  font-size: 0.9em;
-  margin-bottom: 15px;
+  color: #7f8c8d;
+  font-size: 1em;
+  margin-bottom: 20px;
 }
 
 .task {
-  background: #007bff;
+  background: linear-gradient(135deg, #6ec6ff, #ff77b6); /* Gradient blue and pink */
   color: white;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 8px;
   cursor: grab;
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .task span {
   font-size: 0.9em;
   background: #fff;
-  color: #007bff;
-  padding: 2px 5px;
-  border-radius: 3px;
+  color: #6ec6ff; /* Soft blue text */
+  padding: 5px 12px;
+  border-radius: 8px;
   position: absolute;
   top: -10px;
   right: 10px;
 }
 
 .task button {
-  background: red;
+  background: #ff6f61; /* Light pink */
   border: none;
   color: white;
-  padding: 5px;
-  border-radius: 3px;
+  padding: 6px 12px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .task button:hover {
-  background: darkred;
+  background: #e74c3c; /* Darker pink on hover */
 }
 
 .add-task {
   display: flex;
-  margin-top: 10px;
+  margin-top: 20px;
+  justify-content: space-between;
 }
 
 .add-task input {
   flex: 1;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-right: 5px;
+  border-radius: 8px;
+  margin-right: 10px;
+  background: #f4f7fa; /* Light grayish background for input */
+}
+
+.add-task input:focus {
+  border-color: #3498db; /* Blue border on focus */
+  outline: none;
 }
 
 .add-task button {
-  background: #007bff;
+  background: #3498db; /* Blue */
   color: white;
   border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 10px 18px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .add-task button:hover {
-  background: #0056b3;
+  background: #2980b9; /* Darker blue on hover */
 }
 
 .add-task select {
-  margin-left: 5px;
+  margin-left: 10px;
   background: #fff;
   border: 1px solid #ccc;
-  padding: 8px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 8px;
 }
