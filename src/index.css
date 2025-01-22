@@ -6,25 +6,20 @@
   margin: 0;
   padding: 0;
 }
-
 /* Body Styling */
 html, body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  background-image: url("C:\Users\mohan\Downloads\3d-rendering-purple-blue-abstract-geometric-background-advertising-product-display_51768-347.avif"); /* Background image */
-  background-size: cover; /* Cover the entire screen */
-  background-position: center; /* Center the background image */
-  background-attachment: fixed; /* Fix background image while scrolling */
-  background-repeat: no-repeat;
   color: #333;
   overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh; /* Ensure the body takes up the full viewport height */
+  position: relative;
 }
 
-/* Background overlay with reduced opacity */
+/* Background image and overlay */
 body::before {
   content: "";
   position: absolute;
@@ -32,20 +27,38 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(110, 198, 255, 0.3), rgba(255, 119, 182, 0.3)); /* Subtle gradient with low opacity */
+  background-image: url("C:\Users\mohan\Downloads\5137782.png"); /* Background image */
+  background-size: cover; /* Ensure the image covers the full screen */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Fix background image while scrolling */
+  background-repeat: no-repeat;
+  filter: blur(8px); /* Apply blur only to the background image */
+  z-index: -1; /* Ensure it is behind the content */
+  width: 100%; /* Ensure it stretches to fill the screen width */
+  height: 100%; /* Ensure it stretches to fill the screen height */
+}
+
+/* Overlay effect */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(110, 198, 255, 0.2), rgba(255, 119, 182, 0.2)); /* Reduced opacity overlay */
   z-index: -1;
-  filter: blur(10px);
-  opacity: 0.4; /* Adjusted opacity */
+  opacity: 0.3; /* Reduced opacity */
   animation: backgroundAnimation 8s ease-in-out infinite alternate;
 }
 
-/* Smooth Background Animation */
+/* Background Animation */
 @keyframes backgroundAnimation {
   0% {
-    opacity: 0.4;
+    opacity: 0.2;
   }
   100% {
-    opacity: 0.5;
+    opacity: 0.3;
   }
 }
 
